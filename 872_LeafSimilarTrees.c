@@ -4,7 +4,7 @@
 *      Mail:  cityhunterhb.top@gmail.com
 *      Description: ---
 *      CreatedTime: 2019-06-10 07:40:02
-*      LastModified: 2019-06-10 07:43:31
+*      LastModified: 2019-06-11 20:41:17
 ****************************************************/
 
 /*
@@ -52,11 +52,13 @@ bool leafSimilar(struct TreeNode* root1, struct TreeNode* root2){
     {
         for(int i=0; i<=leaf1[0]; i++)
         {
-            if(leaf1[i] == leaf2[i])
+            if(leaf1[i] != leaf2[i])
             {
-                return true;
+                return false;
             }
         }
+
+		return true;
     }
 
     return false;
