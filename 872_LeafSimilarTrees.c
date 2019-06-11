@@ -14,6 +14,7 @@
 思路：分两步。
 	1.递归法求解叶节点。分别求出两棵二叉树的叶节点的序列。
 	2.比较两个数组是否完全相同。包含数组的元素个数和元素排列的序列是否一一对应。
+	3.时间复杂度和空间复杂度为O(N1+N2)。
  * */
 
 
@@ -40,8 +41,10 @@ void GetLeafNum(struct TreeNode* root, int leaf[])
 
     GetLeafNum(root->left, leaf);
     GetLeafNum(root->right, leaf);
+}
 
-bool leafSimilar(struct TreeNode* root1, struct TreeNode* root2){
+bool leafSimilar(struct TreeNode* root1, struct TreeNode* root2)
+{
     int leaf1[100] = {0};
     int leaf2[100] = {0};
 
@@ -58,7 +61,7 @@ bool leafSimilar(struct TreeNode* root1, struct TreeNode* root2){
             }
         }
 
-		return true;
+	return true;
     }
 
     return false;
