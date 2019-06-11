@@ -59,7 +59,7 @@ bool leafSimilar(struct TreeNode* root1, struct TreeNode* root2){
             }
         }
 
-		return true;
+	return true;
     }
 
     return false;
